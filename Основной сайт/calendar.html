@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь - Epicur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Epicur</h1>
+                <span>Умный планировщик для учёбы</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="calendar.html" class="active">Календарь</a></li>
+                    <li><a href="#">Задания</a></li>
+                    <li><a href="#">Прогресс</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn-login">Войти</button>
+                <button class="btn-signup">Регистрация</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="calendar-section">
+            <div class="container">
+                <div class="calendar-header">
+                    <h2>Мой календарь</h2>
+                    <div class="calendar-controls">
+                        <button id="prev-month">←</button>
+                        <span id="current-month">Октябрь 2023</span>
+                        <button id="next-month">→</button>
+                        <button class="btn-primary" id="add-task">Добавить задание</button>
+                    </div>
+                </div>
+                
+                <div class="calendar-container">
+                    <div class="calendar-weekdays">
+                        <div>Пн</div>
+                        <div>Вт</div>
+                        <div>Ср</div>
+                        <div>Чт</div>
+                        <div>Пт</div>
+                        <div>Сб</div>
+                        <div>Вс</div>
+                    </div>
+                    <div class="calendar-days" id="calendar-days">
+                        <!-- Динамически генерируемые дни календаря -->
+                    </div>
+                </div>
+                
+                <div class="task-sidebar">
+                    <h3>Задания на сегодня</h3>
+                    <div class="task-list">
+                        <div class="task-item math">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <h4>Решить задачи по математике</h4>
+                                <p>Глава 5, упражнения 1-10</p>
+                                <span class="task-time">14:00 - 15:30</span>
+                            </div>
+                        </div>
+                        <div class="task-item physics">
+                            <div class="task-checkbox"></div>
+                            <div class="task-content">
+                                <h4>Подготовка к лабораторной по физике</h4>
+                                <p>Тема: Электрические цепи</p>
+                                <span class="task-time">16:00 - 17:30</span>
+                            </div>
+                        </div>
+                        <div class="task-item literature completed">
+                            <div class="task-checkbox checked"></div>
+                            <div class="task-content">
+                                <h4>Прочитать "Война и мир" том 1</h4>
+                                <p>Главы 1-5</p>
+                                <span class="task-time">Выполнено</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Epicur</h3>
+                    <p>Умный планировщик для учёбы</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Продукт</h4>
+                        <a href="#">Функции</a>
+                        <a href="#">Цены</a>
+                        <a href="#">Приложения</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Ресурсы</h4>
+                        <a href="#">Блог</a>
+                        <a href="#">Помощь</a>
+                        <a href="#">Поддержка</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Компания</h4>
+                        <a href="#">О нас</a>
+                        <a href="#">Карьера</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Epicur. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="calendar.js"></script>
+</body>
+</html>
