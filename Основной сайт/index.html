@@ -41,7 +41,7 @@
                         <!-- Здесь будет изображение календаря -->
                         <div class="calendar-mockup">
                             <div class="calendar-header">
-                                <span>Октябрь 2023</span>
+                                <span></span>
                             </div>
                             <div class="calendar-grid">
                                 <!-- Простой макет календаря для предпросмотра -->
@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  
     </main>
 
     <footer>
@@ -122,9 +122,22 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Epicur. Все права защищены.</p>
+                <p></p>
             </div>
         </div>
     </footer>
+    <script src="calendar.js"></script>
+    <script>
+        // Устанавливаем текущий месяц и год в превью календаря на главной странице
+        const monthSpan = document.querySelector('.calendar-header span');
+        if (monthSpan) {
+            const now = new Date();
+            const monthNames = [
+                "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+            ];
+            monthSpan.textContent = monthNames[now.getMonth()] + ' ' + now.getFullYear();
+        }
+    </script>        
 </body>
 </html>

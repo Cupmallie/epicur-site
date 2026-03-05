@@ -35,7 +35,7 @@
                     <h2>Мой календарь</h2>
                     <div class="calendar-controls">
                         <button id="prev-month">←</button>
-                        <span id="current-month">Октябрь 2023</span>
+                        <span id="current-month"></span>
                         <button id="next-month">→</button>
                         <button class="btn-primary" id="add-task">Добавить задание</button>
                     </div>
@@ -57,32 +57,22 @@
                 </div>
                 
                 <div class="task-sidebar">
-                    <h3>Задания на сегодня</h3>
-                    <div class="task-list">
-                        <div class="task-item math">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <h4>Решить задачи по математике</h4>
-                                <p>Глава 5, упражнения 1-10</p>
-                                <span class="task-time">14:00 - 15:30</span>
-                            </div>
-                        </div>
-                        <div class="task-item physics">
-                            <div class="task-checkbox"></div>
-                            <div class="task-content">
-                                <h4>Подготовка к лабораторной по физике</h4>
-                                <p>Тема: Электрические цепи</p>
-                                <span class="task-time">16:00 - 17:30</span>
-                            </div>
-                        </div>
-                        <div class="task-item literature completed">
-                            <div class="task-checkbox checked"></div>
-                            <div class="task-content">
-                                <h4>Прочитать "Война и мир" том 1</h4>
-                                <p>Главы 1-5</p>
-                                <span class="task-time">Выполнено</span>
-                            </div>
-                        </div>
+                    <h3>Добавить задачу</h3>
+                    <div class="todo-form">
+                        <input type="text" id="todo-input" placeholder="Что нужно сделать?">
+                        <select id="todo-priority">
+                            <option value="Обычное">Обычное</option>
+                            <option value="Важно">Важно</option>
+                            <option value="Срочно">Срочно</option>
+                            <option value="Личное">Личное</option>
+                        </select>
+                        <input type="date" id="todo-date">
+                        <button id="todo-add" class="btn-primary">Добавить</button>
+                    </div>
+    
+                    <h3>Задачи на выбранный день</h3>
+                    <div id="selected-date-tasks" class="task-list">
+                        <!-- Здесь будут отображаться задачи для выбранной даты -->
                     </div>
                 </div>
             </div>
@@ -118,11 +108,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Epicur. Все права защищены.</p>
+                <p></p>
             </div>
         </div>
     </footer>
 
     <script src="calendar.js"></script>
+    <script src="calendar-todo.js"></script>
 </body>
 </html>

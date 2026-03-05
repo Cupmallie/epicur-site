@@ -39,14 +39,7 @@ function generateCalendar(year, month) {
         const dayTasks = document.createElement('div');
         dayTasks.className = 'day-tasks';
         
-        // Пример добавления задач (в реальном приложении данные будут из базы)
-        if (day === 5) {
-            dayTasks.innerHTML = '<span class="task-marker" style="background-color: #4A90E2"></span> Математика';
-        } else if (day === 11) {
-            dayTasks.innerHTML = '<span class="task-marker" style="background-color: #FF6B6B"></span> Дедлайн';
-        } else if (day === 18) {
-            dayTasks.innerHTML = '<span class="task-marker" style="background-color: #50C878"></span> Литература';
-        }
+
         
         dayElement.appendChild(dayNumber);
         dayElement.appendChild(dayTasks);
@@ -81,18 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         generateCalendar(currentYear, currentMonth);
     });
     
-    // Обработчик для кнопки добавления задания
-    document.getElementById('add-task').addEventListener('click', function() {
-        alert('Функция добавления задания будет реализована в будущем обновлении!');
-    });
     
-    // Обработчики для чекбоксов заданий
-    const taskCheckboxes = document.querySelectorAll('.task-checkbox');
-    taskCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('click', function() {
-            this.classList.toggle('checked');
-            const taskItem = this.closest('.task-item');
-            taskItem.classList.toggle('completed');
-        });
-    });
+
 });
